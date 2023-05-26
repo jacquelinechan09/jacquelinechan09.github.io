@@ -850,3 +850,9 @@ html, body {
   position: absolute;
   left: 0;
 }
+
+hr{
+	height: 1px;
+	background-color: #2B3C1C;
+	border: none;
+}
