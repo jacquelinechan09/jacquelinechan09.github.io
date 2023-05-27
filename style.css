@@ -134,10 +134,10 @@ h5 {
 	position: absolute;
 	left: 50%;
 	top: 50%;
+	transform: translate(-50%, -50%);
 	background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWYxMDJhZTZkNjgzZWU1MzY0MDIwODdjMDg4ZGVlMjdmMmE0YzMzMyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xTk9ZvMnbIiIew7IpW/giphy.gif);
 	background-repeat: no-repeat;
 	background-position: center;
-	margin: -100px 0 0 -100px;
 }
 
 .navbar-parent {
