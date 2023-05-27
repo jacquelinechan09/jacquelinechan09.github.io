@@ -1,3 +1,7 @@
+.fadeOne {
+  opacity: 0;
+}
+
 .navbar {
 	background-color: #e8dcca;
 	display: flex;
@@ -1064,4 +1068,9 @@ body.dark-mode {
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
+	  
+	  .fadeOne {
+		  opacity: 100% !important;
+	  }
+
   }
