@@ -25,7 +25,7 @@
   }
 
   .navbar li a:hover {
-	background-color: #f1f093;
+	background-color: #f1f093 !important;
 	border-radius: 25px;
   }
 
