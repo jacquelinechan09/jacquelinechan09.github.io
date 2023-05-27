@@ -25,7 +25,8 @@
   }
 
   .navbar li a:hover {
-	background-color: #ddd;
+	background-color: #f1f093;
+	border-radius: 25px;
   }
 
 body {
