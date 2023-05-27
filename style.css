@@ -2,6 +2,7 @@
 	background-color: #e8dcca;
 	display: flex;
 	justify-content: center;
+	height: 100%;
   }
 
   .navbar ul {
@@ -143,7 +144,6 @@ h5 {
 	background-color: #698004 !important;
   height: 80px !important;
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
   width: 100%;
@@ -1038,4 +1038,29 @@ body.dark-mode {
   
   .services-item.dark-mode p {
 	color: #f6fbfe;
+  }
+
+  @media (max-width: 767px) {
+
+	.navbar {
+	  display: none;
+	}
+
+	.intro {
+		display: none;
+	}
+
+	#about-me {
+		opacity: 100% !important;
+		padding-top: 5rem;
+	}
+
+	#notOnMobile {
+		padding-top: 5rem;
+	}
+
+	.introduction {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
   }
