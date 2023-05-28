@@ -1,11 +1,12 @@
 .fontChange {
-		font-family: "Satisfy" !important; 
+	font-family: "Satisfy" !important; 
 }
 
 .navbar {
 	background-color: #e8dcca;
 	display: flex;
 	justify-content: center;
+	height: 100%;
   }
 
   .navbar ul {
@@ -28,7 +29,8 @@
   }
 
   .navbar li a:hover {
-	background-color: #ddd;
+	background-color: #f1f093 !important;
+	border-radius: 25px;
   }
 
 body {
@@ -137,17 +139,16 @@ h5 {
 	position: absolute;
 	left: 50%;
 	top: 50%;
+	transform: translate(-50%, -50%);
 	background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWYxMDJhZTZkNjgzZWU1MzY0MDIwODdjMDg4ZGVlMjdmMmE0YzMzMyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xTk9ZvMnbIiIew7IpW/giphy.gif);
 	background-repeat: no-repeat;
 	background-position: center;
-	margin: -100px 0 0 -100px;
 }
 
 .navbar-parent {
 	background-color: #698004 !important;
   height: 80px !important;
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
   width: 100%;
@@ -1042,4 +1043,34 @@ body.dark-mode {
   
   .services-item.dark-mode p {
 	color: #f6fbfe;
+  }
+
+  @media (max-width: 767px) {
+
+	.navbar {
+	  display: none;
+	}
+
+	.intro {
+		display: none;
+	}
+
+	#about-me {
+		opacity: 100% !important;
+		padding-top: 5rem;
+	}
+
+	#notOnMobile {
+		padding-top: 5rem;
+	}
+
+	.introduction {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	  
+	  .fadeOne {
+		  opacity: 100% !important;
+	  }
+
   }
