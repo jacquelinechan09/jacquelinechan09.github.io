@@ -1074,3 +1074,16 @@ body.dark-mode {
 	  }
 
   }
+
+  @media only screen and (max-width: 767px) {
+	body {
+	  overflow-x: hidden; /* Hide horizontal scrollbar on mobile devices */
+	}
+  
+	.container {
+	  width: 100%;
+	  max-width: 100%;
+	  overflow-x: hidden; /* Hide content that exceeds viewport width on mobile devices */
+	}
+
+  }
