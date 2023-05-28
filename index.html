@@ -18,10 +18,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
   <link rel="stylesheet" type="text/css" href=".\style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  <script>
-  if (location.hostname.startsWith('www.')) {
-    location.href = location.href.replace(/^www\./, '');
-  }
+<script>
+if (location.hostname.startsWith('www.')) {
+  location.replace('https://' + location.hostname.slice(4) + location.pathname + location.search);
+}
 </script>
   <script src=".\script.js"></script>
 	<!-- Google Tag Manager -->
