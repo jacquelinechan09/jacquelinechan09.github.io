@@ -7,6 +7,7 @@
 	display: flex;
 	justify-content: center;
 	height: 100%;
+	border-radius: 0px !important;
   }
 
   .navbar ul {
@@ -162,6 +163,14 @@ h5 {
 .navbar-brand {
 	height: 80px !important;
 	margin-left: 0;
+}
+
+.navbar-brand img {
+	transition: all 0.3s;
+}
+
+.navbar-brand:hover img {
+	content: url("https://images.emojiterra.com/google/android-12l/512px/1f96d.png");
 }
 
 #ResponsiveNav li a {
@@ -398,7 +407,7 @@ a .fa-arrow-circle-down {
 }
 
 .navbar-brand:hover {
-  color: black !important;
+  color: #99E9DE !important;
 }
 
 .about-ct:hover .textbox-about {
@@ -813,32 +822,54 @@ html, body {
 }
 
 .scroll-down-arrow {
-  width: 40px;
-  height: 40px;
-  background-color: white;
-  background-image: url('https://i.ibb.co/Sx1RCCG/png-transparent-scrolling-arrow-computer-icons-scroll-lock-next-button-angle-web-design-photography.png');
-  background-size: cover;
-  transition: transform 0.3s, background-color 0.3s;
-  animation: bounce 1.8s infinite;
-  border-radius: 25px;
-}
-
-.scroll-down-arrow:hover {
-  transform: scale(1.2);
-  background-color: #f5897a;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	background-image: url('https://i.ibb.co/Sx1RCCG/png-transparent-scrolling-arrow-computer-icons-scroll-lock-next-button-angle-web-design-photography.png');
+	background-size: cover;
+	transition: transform 0.3s, background-color 0.3s;
+	animation: bounce 1.8s infinite;
+	border-radius: 25px;
   }
-  40% {
-    transform: translateY(-10px);
+  
+  .scroll-down-arrow::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 50%;
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
   }
-  60% {
-    transform: translateY(-5px);
+  
+  .scroll-down-arrow:hover {
+	transform: scale(1.2);
+	background-color: #f5897a;
   }
-}
+  
+  .scroll-down-arrow:hover::after {
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+  }
+  
+  @keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+	  transform: translateY(0);
+	}
+	40% {
+	  transform: translateY(-10px);
+	}
+	60% {
+	  transform: translateY(-5px);
+	}
+  }
+  
 
 @media only screen and (max-width: 480px) {
 	.brand-heading {
@@ -891,159 +922,36 @@ hr{
 	border: none;
 }
 
-/* Add these styles to your existing CSS file */
-/* Dark mode styles */
-body.dark-mode {
-	background-color: #1c1c1c;
-	color: #f6fbfe;
-  }
-  
-  body.dark-mode a {
-	color: #f6fbfe;
-  }
-  
-  /* Styles for the dark mode toggle button */
-  .switch {
-	position: relative;
+  .download-button {
 	display: inline-block;
-	width: 60px;
-	height: 34px;
-  }
-  
-  .switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
-  }
-  
-  .slider {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #ccc;
-	transition: .4s;
-  }
-  
-  .slider:before {
-	position: absolute;
-	content: "";
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
-	background-color: white;
-	transition: .4s;
-  }
-  
-  input:checked + .slider {
-	background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-	box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-	transform: translateX(26px);
-  }
-  
-  .slider.round {
-	border-radius: 34px;
-  }
-  
-  .slider.round:before {
-	border-radius: 50%;
-  }
-  
-  body.dark-mode {
-	background-color: #121212;
-	color: #f6fbfe;
-  }
-  
-  .navbar-brand.dark-mode,
-  .navbar-brand.dark-mode img {
-	color: #f6fbfe !important;
-  }
-  
-  .intro-text.dark-mode {
-	color: #f5897a;
-  }
-  
-  h2.dark-mode {
-	color: #f6fbfe;
-  }
-  
-  p.dark-mode {
-	color: #f6fbfe;
-  }
-  
-  .experience-ct.dark-mode {
-	background-color: #121212;
-  }
-  
-  .timeline-label.dark-mode h4 {
-	color: #f6fbfe;
-  }
-  
-  .timeline-label.dark-mode p {
-	color: #f6fbfe;
-  }
-  
-  .timeline-year.dark-mode {
-	background-color: #121212;
-  }
-  
-  .timeline-experience.dark-mode {
-	border-color: #7c70db;
-  }
-  
-  .timeline-experience-info.dark-mode h5 {
-	color: #f6fbfe;
-  }
-  
-  .timeline-experience-info.dark-mode .timeline-role {
-	color: #7c70db;
-  }
-  
-  .timeline-experience-info.dark-mode p {
-	color: #f6fbfe;
-  }
-  
-  section.dark-mode {
-	background-color: #121212;
-	color: #f6fbfe;
-  }
-  
-  .portfolio-ct.dark-mode {
-	background-color: #121212;
-  }
-  
-  .portfolio-details.dark-mode h3 {
-	color: #002145;
-  }
-  
-  .portfolio-details.dark-mode p {
-	color: #f6fbfe;
-  }
-  
-  .portfolio-tags.dark-mode li {
-	color: #7c70db;
-  }
-  
-  .services.dark-mode h2 {
-	color: #f6fbfe;
-  }
-  
-  .services-item.dark-mode h3 {
-	color: #002145;
-  }
-  
-  .services-item.dark-mode p {
-	color: #f6fbfe;
-  }
+	background-color: #698004;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	border-radius: 50px;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	transition: transform 0.3s, box-shadow 0.3s;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+	z-index: 9999;
+}
+
+.download-button:hover {
+	transform: scale(1.1);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	color: black !important;
+}
+
+@media screen and (max-width: 768px) {
+	.download-button {
+		font-size: 16px;
+		padding: 10px 20px;
+		top: 10px;
+		right: 10px;
+	}
+}
 
   @media (max-width: 767px) {
 
@@ -1085,5 +993,10 @@ body.dark-mode {
 	  max-width: 100%;
 	  overflow-x: hidden; /* Hide content that exceeds viewport width on mobile devices */
 	}
+  }
 
+  @media only screen and (max-width: 1000px) {
+	.download-button {
+		display: none !important;
+	}
   }

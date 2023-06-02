@@ -46,6 +46,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<a href="#" id="return-to-top" style="display: none; color: #D95E4E; font-size: 20px;">
     <center><i class="fa fa-chevron-up"></i></center>
 	</a>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#return-to-top').on('click', function() {
+      var audio = document.getElementById('audio-recording');
+      setTimeout(function() {
+        audio.play();
+      }, 500); // Delayed playback
+      // Additional code to scroll back to the top
+      $('html, body').animate({scrollTop: 0}, 'slow');
+    });
+  });
+</script>
+
+	<audio id="audio-recording">
+		<source src="https://cdn.freesound.org/previews/476/476712_5479102-lq.mp3" type="audio/mpeg">
+	  </audio>
     
 	<div class="navbar-parent">
 		<a style="color: #F6FBFE" class="navbar-brand" href="#about-me">
@@ -65,6 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			  <li><a href="#specialties">Specialties</a></li>
 			  <li><a href="#projects">Projects</a></li>
 			  <li><a href="#contact">Contact</a></li>
+			  <li><a style="color: white" href="https://drive.google.com/file/d/1HcGwAGarJKbD-LrMoF9a-xUK-HzEtRaT/view?usp=sharing" download target="_blank" class="download-button">View Resume</a></li>
 			</ul>
 		    </div>	
 		</div>	  
