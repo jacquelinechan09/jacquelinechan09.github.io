@@ -415,10 +415,6 @@ a .fa-arrow-circle-down {
 	transform: scale(1);
 }
 
-.fade {
-  opacity: 0;
-}
-
 .textbox-about {
 	-webkit-transition: all 0.7s ease;
 	transition: all 0.7s ease;
@@ -976,11 +972,6 @@ hr{
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
-	  
-	  .fadeOne {
-		  opacity: 100% !important;
-	  }
-
   }
 
   @media only screen and (max-width: 767px) {
@@ -1047,4 +1038,14 @@ hr{
 	  .introduction {
 		color: black;
 	  }
+  }
+
+  .styling {
+	color: #dedede;
+	padding-left: 1em;
+	padding-right: 1em;
+  }
+
+  .colors {
+	color: #dedede;
   }
