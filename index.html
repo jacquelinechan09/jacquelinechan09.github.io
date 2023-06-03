@@ -18,6 +18,48 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
   <link rel="stylesheet" type="text/css" href=".\style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+  <script>
+	$(document).ready(function() {
+  // Check WebGL support
+  if (typeof WebGLRenderingContext === 'undefined' || !WebGLRenderingContext) {
+    // WebGL is not supported, handle it accordingly
+  } else {
+    // WebGL is supported, apply the ripples effect
+    $(".hover").ripples({
+      resolution: 1080,
+      perturbance: 0.01,
+      interactive: true
+    });
+  }
+
+  // Other code and event handlers can go here
+});
+
+jQuery(document).ready(function($) {
+  try {
+  $(".hover").ripples({
+    resolution: 1080,
+    perturbance: 0.01,
+    interactive: true
+  });
+  } catch (e) {
+  $(".error")
+    .show()
+    .text(e);
+  }
+
+  setInterval(function() {
+  var $el = $(".hover");
+  var x = Math.random() * $el.outerWidth();
+  var y = Math.random() * $el.outerHeight();
+  var dropRadius = 30;
+  var strength = 0.04 + Math.random() * 0.04;
+
+  $el.ripples("drop", x, y, dropRadius, strength);
+  }, 4000);
+});
+  </script>
   <script src=".\script.js"></script>
 	<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -114,9 +156,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			<div id="about" class="container">
 				<div class="row">
 					<h2 id="notOnMobile">ABOUT</h2>
-					<div>
-					<center><p class="introduction" style="font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif; font-size: 20px;">👋 Greetings! I'm Jacqueline, a recent UBC Computer Science grad with a passion for web communications and IT project management. I have a solid foundation in implementing SEO techniques, developing branding strategies, and utilizing tools like the Adobe Creative Suite. With a strong analytical mindset and a desire to learn and grow, I am excited to embark on my professional journey and make a positive impact using digital media. I'm always eager to take on new challenges, collaborate with teams, and contribute my skills to drive success in the ever-evolving tech landscape.</p></center>
+					<div class="hover">
+					<center><strong><p class="introduction" style="font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif; font-size: 20px;">👋 Greetings! I'm Jacqueline, a recent UBC Computer Science grad with a passion for web communications and IT project management. I have a solid foundation in implementing SEO techniques, developing branding strategies, and utilizing tools like the Adobe Creative Suite. With a strong analytical mindset and a desire to learn and grow, I am excited to embark on my professional journey and make a positive impact using digital media. I'm always eager to take on new challenges, collaborate with teams, and contribute my skills to drive success in the ever-evolving tech landscape.</p></strong></center>
 					</div>
+
+					<div class="noHover">
+						<center><p class="introduction" style="font-family: 'Century Gothic',Futura,'URW Gothic L',sans-serif; font-size: 20px;">👋 Greetings! I'm Jacqueline, a recent UBC Computer Science grad with a passion for web communications and IT project management. I have a solid foundation in implementing SEO techniques, developing branding strategies, and utilizing tools like the Adobe Creative Suite. With a strong analytical mindset and a desire to learn and grow, I am excited to embark on my professional journey and make a positive impact using digital media. I'm always eager to take on new challenges, collaborate with teams, and contribute my skills to drive success in the ever-evolving tech landscape.</p></center>
+						</div>
 				</div>
 			</div>
 		</section>

@@ -1000,3 +1000,51 @@ hr{
 		display: none !important;
 	}
   }
+  
+
+  @media only screen and (min-width: 423px) {
+	.hover {
+		display: none;
+	  }
+
+	  .noHover {
+		display: block;
+	  }
+
+	  .introduction {
+		color: black;
+	  }
+  }
+
+  @media only screen and (min-width: 369px) and (max-width: 422px) {
+	.hover {
+		width: 100vw;
+		height: 100vh;
+		background-size: cover;
+		&.hover {
+		  background-image: url(https://images.unsplash.com/photo-1496196614460-48988a57fccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80);
+		}
+	  }
+
+	  .introduction {
+		color: #F5DEB3;
+	  }
+
+	  .noHover {
+		display: none;
+	  }
+  }
+
+  @media only screen and (max-width: 368px) {
+	.hover {
+		display: none;
+	  }
+
+	  .noHover {
+		display: block;
+	  }
+
+	  .introduction {
+		color: black;
+	  }
+  }
