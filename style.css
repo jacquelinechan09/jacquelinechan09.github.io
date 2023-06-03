@@ -1049,3 +1049,58 @@ hr{
   .colors {
 	color: #dedede;
   }
+
+  @media only screen and (max-width: 422px) {
+	.mobile-container {
+		max-width: 480px;
+		margin: auto;
+		background-color: #698004;
+		height: auto;
+		color: white;
+		border-radius: 10px;
+	  }
+	  
+	  .topnav {
+		overflow: hidden;
+		background-color: rgb(151, 74, 206);
+		position: relative;
+		width: 100%;
+	  }
+	  
+	  .topnav #myLinks {
+		display: none;
+	  }
+	  
+	  .topnav a {
+		color: white;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+		display: block;
+	  }
+	  
+	  .topnav a.icon {
+		background: #2B3C1C;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+	  }
+	  
+	  .topnav a:hover {
+		background-color: #99E9DE;
+		color: black;
+	  }
+	  
+	  .active {
+		background-color: #D95E4E;
+		color: white;
+		height: auto;
+	  }
+  }
+  
+  @media only screen and (min-width: 423px) {
+  .mobile-container {
+	display: none;
+  }
+}

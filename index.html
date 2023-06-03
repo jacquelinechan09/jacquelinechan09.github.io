@@ -111,6 +111,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		<a style="color: #F6FBFE" class="navbar-brand" href="#about-me">
 		  <img class="navbar-brand" src="https://i.ibb.co/CV3HY6S/android-chrome-512x512.png" alt="JC logo"><br> Jacqueline Chan's Personal Portfolio
 		</a>
+
+    <!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <center><a download target="_blank" href="https://drive.google.com/file/d/1HcGwAGarJKbD-LrMoF9a-xUK-HzEtRaT/view?usp=sharing" class="active">View Resume</a></center>
+    <div id="myLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#specialties">Specialties</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  
+  <!-- End smartphone / tablet look -->
+  </div>
 	  
 		<div class="navbar">
 			<div class="inner">
@@ -130,8 +151,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		    </div>	
 		</div>	  
 	  </div>
-	  
-    
+
 		<header class="intro">
 			<div class="intro-body">
 				<div class="container">
@@ -397,3 +417,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 	</body>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>    
