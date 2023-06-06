@@ -325,24 +325,103 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="container-fluid portfolio-ct">
     <h2>passion projects</h2>
     <center>
-		<h3 style="padding-bottom: 10px;">In addition to the projects below, I also create scripts and design graphics.</h3>
-		<h3 class="fontChange"><u>Coding:</u>&nbsp;<a href="https://photocollage.vercel.app/" target="_blank">Collage Generator (React.js)</a> 
-      ┆ <a href="https://github.com/jacquelinechan09/FileCopyingApplet/tree/main#readme" target="_blank">File Copying Applet</a> 
-		</h3>
+		<h3 style="padding-bottom: 10px;">I create scripts and design graphics. Open the tabs below and click on the selections inside:</h3>
 
-    <h3 class="fontChange"><u>Databases:</u>&nbsp;<a href="https://docs.google.com/document/d/1njKkxTGdjnVDJ1pwLuKPBLLUaP6R9dDOXUnP4g-x_gI/edit" target="_blank">Job Board Project (SQL)</a> 
-      ┆ <a href="https://github.com/jacquelinechan09/ContactForm#readme" target="_blank">MongoDB Database Form</a>
-		</h3>
+    <style>
+      /* Style the tab */
+      .tab {
+        overflow: hidden;
+        border: 3px solid #e8dcca;
+        background-color: #F6FBFE;
+      }
+      
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 22px;
+        font-family: "Satisfy" !important; 
+      }
+      
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: #99E9DE;
+      }
+      
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color:#002145;
+        color: #e8dcca;
+      }
+      
+      /* Style the tab content */
+      .tabcontent {
+        font-family: "Satisfy" !important; 
+        display: none;
+        border: 3px solid #e8dcca;
+        border-top: none;
+        font-size: 22px;
+      }
+      </style>
 
-    <h3 class="fontChange"><u>Digital Communications:</u>&nbsp;<a href="https://www.canva.com/design/DAFkKKH2Zyw/J_9D1W_JQ6gIqKdlMEBnuw/watch?utm_content=DAFkKKH2Zyw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank">Graphic Design Portfolio Video</a> 
-			┆ <a href="https://mailchi.mp/ubc/ubcfarmnewsletteroctober28?e=2523550cbc#" target="_blank">Newsletter Creation</a>
-      ┆ <a href="https://www.youtube.com/watch?v=zVC_AgqZqXk" target="_blank">Short Takes</a>
-      ┆ <a href="https://ubcfarm.ubc.ca/author/wai-ting-chan/" target="_blank">Web Posts</a>
-		</h3>
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'coding')">Coding</button>
+        <button class="tablinks" onclick="openCity(event, 'databases')">Databases</button>
+        <button class="tablinks" onclick="openCity(event, 'digital')">Digital Communications</button>
+        <button class="tablinks" onclick="openCity(event, 'project')">Project Coordination</button>
+      </div>
+      
+      <div id="coding" class="tabcontent" style="padding-top: 5px; padding-bottom: 15px;">
+        <h3 style="padding-bottom: 5px;">Coding:</h3>
+        <a href="https://photocollage.vercel.app/" target="_blank">Collage Generator (React.js)</a> 
+      ┆ <a href="https://github.com/jacquelinechan09/FileCopyingApplet/tree/main#readme" target="_blank">File Copying Applet</a>
+      </div>
+      
+      <div id="databases" class="tabcontent" style="padding-top: 5px; padding-bottom: 15px;">
+        <h3 style="padding-bottom: 5px;">Databases:</h3>
+        <a href="https://docs.google.com/document/d/1njKkxTGdjnVDJ1pwLuKPBLLUaP6R9dDOXUnP4g-x_gI/edit" target="_blank">Job Board Project (SQL)</a> 
+        ┆ <a href="https://github.com/jacquelinechan09/ContactForm#readme" target="_blank">MongoDB Database Form</a>
+      </div>
+      
+      <div id="digital" class="tabcontent" style="padding-top: 5px; padding-bottom: 15px;">
+        <h3 style="padding-bottom: 5px;">Digital Communications:</h3>
+        <a href="https://www.canva.com/design/DAFkKKH2Zyw/J_9D1W_JQ6gIqKdlMEBnuw/watch?utm_content=DAFkKKH2Zyw&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank">Graphic Design Portfolio Video</a> 
+        ┆ <a href="https://mailchi.mp/ubc/ubcfarmnewsletteroctober28?e=2523550cbc#" target="_blank">Newsletter Creation</a>
+        ┆ <a href="https://www.youtube.com/watch?v=zVC_AgqZqXk" target="_blank">Short Takes</a>
+        ┆ <a href="https://ubcfarm.ubc.ca/author/wai-ting-chan/" target="_blank">Web Posts</a>
+      </div>
 
-    <h3 class="fontChange"><u>Project Coordination:</u>&nbsp;<a href="https://i.ibb.co/yhDXmQj/20-Years-Of-UBC-Farm.jpg" target="_blank">Fundraising Poster</a> 
-      ┆ <a href="https://ubcfarm.ubc.ca/celebrating-20-years-the-ubc-farm-anniversary-report-is-published/" target="_blank">Report Featuring Key Program Indicators</a>
-    </h3>
+      <div id="project" class="tabcontent" style="padding-top: 5px; padding-bottom: 15px;">
+        <h3 style="padding-bottom: 5px;">Project Coordination:</h3>
+        <a href="https://i.ibb.co/yhDXmQj/20-Years-Of-UBC-Farm.jpg" target="_blank">Fundraising Poster</a> 
+        ┆ <a href="https://ubcfarm.ubc.ca/celebrating-20-years-the-ubc-farm-anniversary-report-is-published/" target="_blank">Report Featuring Key Program Indicators</a>
+      </div>
+      
+      <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+  // Automatically open the "Coding" tab and simulate a click event
+  var codingTabButton = document.getElementsByClassName("tablinks")[0];
+  codingTabButton.click();
+      </script>
+
       <div class="row">
         <!-- start second portfolio item -->
         <div class="col-sm-6 col-md-4 grid-portfolio">
